@@ -1,10 +1,10 @@
-import { GitHubActivity } from "../models/Activity";
 import { IVersionControlService } from "../services/services.interface";
 import { parseArguments } from "../utils/argumentParser";
 import { helpCommand, fetchActivityCommand } from "./commands";
+import { IEventMapper } from "../utils/gitHubEventMapper";
 
 export class CliManager {
-  constructor(private versionControlService: IVersionControlService) {}
+  constructor(private versionControlService: IVersionControlService, private eventMapper: IEventMapper) {}
 
   async execute() {
     const args = parseArguments(process.argv.slice(2));
@@ -13,7 +13,7 @@ export class CliManager {
       helpCommand();
     }
     if (args?.username) {
-      await fetchActivityCommand(args.username, this.versionControlService);
+      await fetchActivityCommand(args.username, this.versionControlService, this.eventMapper);
     }
   }
 }

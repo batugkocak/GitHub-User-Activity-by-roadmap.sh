@@ -2,6 +2,7 @@
 
 A simple command line interface (CLI) application to fetch and display the recent activity of a GitHub user. This project helps practice working with APIs, handling JSON data, and building CLI applications. There are still missing features, feel free to contribute! Also, if you have any suggestions, please reach me: batugkocak@gmail.com
 
+
 ---
 
 ## Features
@@ -119,4 +120,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-This project was inspired by [roadmap.sh](https://roadmap.sh) and serves as a learning exercise for building CLI tools and consuming APIs.
+This project was inspired by [roadmap.sh/Github User Activity](https://roadmap.sh/projects/github-user-activity)  and serves as a learning exercise for building CLI tools and consuming APIs.
